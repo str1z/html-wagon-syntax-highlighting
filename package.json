@@ -1,0 +1,40 @@
+{
+  "name": "html-wagon-syntax-highlighting",
+  "displayName": "HTML Wagon Syntax Highlighter",
+  "description": "Syntax highlighting for HTML Wagon templates.",
+  "publisher": "str1z",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "wagon",
+        "aliases": [
+          "Wagon",
+          "wagon"
+        ],
+        "extensions": [
+          ".wg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "html",
+        "scopeName": "source.wagon",
+        "path": "./syntaxes/wagon.tmLanguage.json"
+      },
+      {
+        "language": "wagon",
+        "scopeName": "source.wagon",
+        "path": "./syntaxes/wagon.tmLanguage.json"
+      }
+    ]
+  }
+}

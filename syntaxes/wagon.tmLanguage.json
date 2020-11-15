@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Wagon",
+  "fileTypes": ["html", "wagon"],
+  "firstLineMatch": "^{",
+  "patterns": [{ "include": "text.html.basic" }, { "include": "#ends" }, { "include": "#tags" }],
+  "repository": {
+    "tags": {
+      "begin": "{[#@:%]?",
+      "end": "}",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.control"
+        }
+      },
+      "endCaptures": {
+        "0": { "name": "keyword.control" }
+      },
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    "ends": {
+      "name": "keyword.control",
+      "begin": "{/",
+      "end": "}"
+    }
+  },
+  "scopeName": "source.wagon"
+}
